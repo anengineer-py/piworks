@@ -4,7 +4,7 @@ m = [
     [2, 6, 9, 0],
     [8, 5, 9, 3]]
 
-def asal(sayi):
+def nonPrime(sayi):
     if sayi > 1:
         for i in range(2,sayi):
             if (sayi % i) == 0:
@@ -20,19 +20,19 @@ j = 0
 for i in range(len(m)):
     i1 = m[i][j]
     i2 = m[i][j+1]
-    if(i1 > i2 and asal(i1) == False):
+    if(i1 > i2 and nonPrime(i1) == False):
         mmax = i1
         j = m[i].index(mmax)
         toplam += mmax
-    elif(i2 > i1 and asal(i2) == False):
+    elif(i2 > i1 and nonPrime(i2) == False):
         mmax = i2
         j = m[i].index(mmax)
         toplam += mmax
-    elif(asal(i1) == False):
+    elif(nonPrime(i1) == False):
         mmax = i1
         j = m[i].index(mmax)
         toplam += mmax
-    elif(asal(i2) == False):
+    elif(nonPrime(i2) == False):
         mmax = i2
         j = m[i].index(mmax)
         toplam += mmax
